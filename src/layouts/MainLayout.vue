@@ -13,9 +13,10 @@
 
 				<q-toolbar-title> Reminiscencia App </q-toolbar-title>
 
-				<q-btn color="dark" to="/">Inicio</q-btn>
+				<q-btn color="dark" to="/" v-if="usuarioStore.token">Inicio</q-btn>
 				<q-btn color="orange" to="/protected" v-if="usuarioStore.token">Protected</q-btn>
-				<q-btn color="green" @click="login" v-if="!usuarioStore.token">Iniciar sesión</q-btn>
+				<q-btn class="q-mr-sm" color="green" to="/login" v-if="!usuarioStore.token">Iniciar sesion</q-btn>
+				<q-btn color="green" to="/register" v-if="!usuarioStore.token">Registrarse</q-btn>
 				<q-btn color="red" @click="logout" v-if="usuarioStore.token">Cerrar sesión</q-btn>
 			</q-toolbar>
 		</q-header>

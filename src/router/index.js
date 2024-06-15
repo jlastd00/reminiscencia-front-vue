@@ -35,29 +35,6 @@ export default route(function (/* { store, ssrContext } */) {
 
 		return next();
 		
-		// if (sessionStorage.getItem('usuario')) {
-		// 	await usuarioStore.refreshToken();
-		// 	if (requiredAuth) {
-		// 		if (usuarioStore.token) {
-		// 			return next();
-		// 		}
-		// 		return next('/login');
-		// 	}
-		// 	else {
-		// 		return next();
-		// 	}
-		// }
-		// else {
-		// 	if (requiredAuth) {
-		// 		await usuarioStore.refreshToken();
-		// 		if (usuarioStore.token) {
-		// 			return next();
-		// 		}
-		// 		return next('/login');
-		// 	}
-		// 	next();
-		// }		
-		
 	});
 	return Router
 })
